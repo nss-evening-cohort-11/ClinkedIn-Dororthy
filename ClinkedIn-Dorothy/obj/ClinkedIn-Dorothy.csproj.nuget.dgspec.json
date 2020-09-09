@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {}
+    "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {
+    "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
+        "projectUniqueName": "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
         "projectName": "ClinkedIn-Dorothy",
-        "projectPath": "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
-        "packagesPath": "C:\\Users\\John Fleming\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy\\obj\\",
+        "projectPath": "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
+        "packagesPath": "C:\\Users\\16155\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\John Fleming\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\16155\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
