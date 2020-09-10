@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {}
+    "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {
+    "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
+        "projectUniqueName": "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
         "projectName": "ClinkedIn-Dorothy",
-        "projectPath": "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
-        "packagesPath": "C:\\Users\\16155\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\16155\\source\\repos\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\obj\\",
+        "projectPath": "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
+        "packagesPath": "C:\\Users\\crumpton\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\16155\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\crumpton\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -14,5 +14,24 @@ namespace ClinkedIn_Dorothy.Data
         {
             return _members;
         }
+
+
+
+        public void AddMember(Member memberToAdd)
+        {
+            int newId = 1;
+            if (_members.Count > 0)
+            {
+                newId = _members.Select(p => p.Id).Max() + 1;
+            }
+            memberToAdd.Id = newId;
+
+            _members.Add(memberToAdd);
+        }
+
+        public Member GetById(int id)
+        {
+            return _members.FirstOrDefault(member => member.Id == id);
+        }
     }
 }
