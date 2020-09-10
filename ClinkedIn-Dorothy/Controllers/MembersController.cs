@@ -34,5 +34,26 @@ namespace ClinkedIn_Dorothy.Controllers
 
             return Ok(allMembers);
         }
+
+        [HttpGet("{id}/services")]
+        public IActionResult GetServices(int id)
+        {
+            var oneMember = _repo.GetById(id);
+
+            return Ok(oneMember.Services);
+        }
+
+        [HttpPut("{id}/services")]
+        public IActionResult NewService(int id, Member newService)
+        {
+            var oneMember = _repo.GetById(id);
+
+            foreach (var service in newService.Services)
+            {
+                oneMember.Services.Add(service);
+            }
+
+            return Ok();
+        }
     }
 }
