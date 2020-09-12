@@ -50,6 +50,24 @@ namespace ClinkedIn_Dorothy.Controllers
             return Ok(allMembers);
         }
 
+
+        [HttpGet("{memberId}/enemies")]
+        public IActionResult GetAllEnemies(int memberId)
+        {
+            var allEnemies = _repo.GetEnemies(memberId);
+
+            return Ok(allEnemies);
+        }
+
+        [HttpPut("{memberId}/enemies/{enemyId}")]
+        public IActionResult AddEnemy(int memberId, int enemyId)
+        {
+            _repo.AddAsEnemy(memberId, enemyId);
+
+            return Ok();
+
+        }
+
         [HttpGet("{id}/services")]
         public IActionResult GetServices(int id)
         {
@@ -97,6 +115,7 @@ namespace ClinkedIn_Dorothy.Controllers
             //        }
             //    }
             //}
+
             return Ok();
         }
 

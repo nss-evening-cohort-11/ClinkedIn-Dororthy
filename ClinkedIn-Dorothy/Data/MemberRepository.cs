@@ -41,10 +41,18 @@ namespace ClinkedIn_Dorothy.Data
             return _members;
         }
 
+<<<<<<< HEAD
+        public List<Member> GetEnemies(int memberId)
+        {
+            return GetById(memberId).Enemies;
+        }
+        
+=======
         public List<Member> GetYourFriends(int memberId)
         {
             return GetById(memberId).Friends;
         }
+>>>>>>> master
 
         public void AddMember(Member memberToAdd)
         {
@@ -66,10 +74,20 @@ namespace ClinkedIn_Dorothy.Data
             member.Friends.Add(friend);
         }
 
+
+        public void AddAsEnemy(int memberId, int enemyId)
+        {
+            var member = GetById(memberId);
+            var newEnemy = GetById(enemyId);
+
+            member.Enemies.Add(newEnemy);
+        }
+
         public void Remove(int id, string delServe)
         {
             var oneMember = GetById(id);
             oneMember.Services.Remove(delServe);
+
         }
 
         public Member GetById(int id)
