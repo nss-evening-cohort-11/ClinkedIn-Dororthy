@@ -35,20 +35,28 @@ namespace ClinkedIn_Dorothy.Controllers
             return Ok(allMembers);
         }
 
-        //[HttpGet("api/members/{memberId}/enemies")]
-        //public IActionResult GetAllEnemies()
-        //{
-        //    var allEnemies = _repo.GetEnemies(memberId);
+        [HttpGet("api/members/{memberId}/enemies")]
+        public IActionResult GetAllEnemies()
+        {
+            var allEnemies = _repo.GetEnemies(memberId);
 
-        //    return Ok(allEnemies);
-        //}
+            return Ok(allEnemies);
+        }
 
         [HttpPut("{memberId}/enemies/{enemyId}")]
-            public IActionResult AddEnemy(int memberId, int enemyId)
+        public IActionResult AddEnemy(int memberId, int enemyId)
         {
             _repo.AddAsEnemy(memberId, enemyId);
 
             return Ok();
+        }
+
+        [HttpGet("{interest}")]
+        public IActionResult GetMembersByInterest(string interest)
+        {
+            var lowercaseInterest = interest.ToLower();
+            var allMembersByInterest = _repo.FindByInterest(lowercaseInterest);
+            return Ok(allMembersByInterest);
         }
     }
 }

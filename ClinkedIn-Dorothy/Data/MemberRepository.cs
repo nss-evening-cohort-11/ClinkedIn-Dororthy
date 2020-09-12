@@ -8,7 +8,33 @@ namespace ClinkedIn_Dorothy.Data
 {
     public class MemberRepository
     {
-        static List<Member> _members = new List<Member>();
+        static List<Member> _members = new List<Member>()
+         {
+            new Member {
+                Id = 1,
+                Name = "Prison Mike",
+                Interest = new List<string> { "Swimming", "Singing", "Basketball" },
+                Services = new List<string> { "Haircuts", "Smuggling", "Shoe shine" },
+                Friends = new List<Member> { },
+                Enemies = new List<Member> { },
+            },
+            new Member {
+                Id = 2,
+                Name = "Joe",
+                Interest = new List<string> { "Swimming", "Gambling", "Arm Wrestling" },
+                Services = new List<string> { "Haircuts", "Masonry", "Carpentry" },
+                Friends = new List<Member> { },
+                Enemies = new List<Member> { },
+            },
+            new Member {
+                Id = 3,
+                Name = "Brad",
+                Interest = new List<string> { "Weight Lifting", "Gambling", "Fishing" },
+                Services = new List<string> { "Writing", "Sewing", "Carpentry" },
+                Friends = new List<Member> { },
+                Enemies = new List<Member> { },
+            }
+        };
 
         public List<Member> GetAll()
         {
@@ -40,6 +66,34 @@ namespace ClinkedIn_Dorothy.Data
         public Member GetById(int id)
         {
             return _members.FirstOrDefault(member => member.Id == id);
+        }
+
+        public List<Member> LowercaseInterests()
+        {
+            var loweredMembers = new List<Member>();
+
+            // loop through the members 
+            foreach (var member in _members)
+            {
+                var loweredInterests = new List<string>();
+                // change each string in Interests list for current member to be lowercased
+                loweredInterests = member.Interest.ConvertAll(i => i.ToLower());
+
+                // overwrite previous list of interests with modified list
+                member.Interest = loweredInterests;
+
+                loweredMembers.Add(member);
+            };
+
+            return loweredMembers;
+        }
+
+        public List<Member> FindByInterest(string interest)
+        {
+            var membersWithLowercaseInterests = LowercaseInterests();
+            var filteredMembers = membersWithLowercaseInterests.Where(member => member.Interest.Contains(interest)).ToList();
+
+            return filteredMembers;
         }
     }
 }
