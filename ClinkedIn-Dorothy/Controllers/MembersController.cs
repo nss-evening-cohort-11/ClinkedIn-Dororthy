@@ -50,10 +50,60 @@ namespace ClinkedIn_Dorothy.Controllers
             return Ok(allMembers);
         }
 
+        [HttpGet("{id}/services")]
+        public IActionResult GetServices(int id)
+        {
+            var oneMember = _repo.GetById(id);
+
+            return Ok(oneMember.Services);
+        }
+
+        [HttpPut("{id}/services")]
+        public IActionResult NewService(int id, Member newService)
+        {
+            var oneMember = _repo.GetById(id);
+
+            foreach (var service in newService.Services)
+            {
+                oneMember.Services.Add(service);
+            }
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}/services")]
+        public IActionResult DeleteService(int id, Member servicesToDelete)
+        {
+            var oneMember = _repo.GetById(id);
+
+            for (int i = 0; i < oneMember.Services.ToArray().Length; i++)
+            {
+                foreach (var service in servicesToDelete.Services)
+                {
+                    if (service == oneMember.Services[i])
+                    {
+                        _repo.Remove(id, service);
+                    }
+                }
+            }
+
+            //foreach (var service in oneMember.Services)
+            //{
+            //    foreach (var delServe in serviceToDelete.Services)
+            //    {
+            //        if (service == delServe)
+            //        {
+            //            _repo.Remove(id, delServe);
+            //        }
+            //    }
+            //}
+            return Ok();
+        }
+
         [HttpGet("{interest}")]
         public IActionResult GetMembersByInterest(string interest)
         {
-            var lowercaseInterest = interest;
+            var lowercaseInterest = interest.ToLower();
             var allMembersByInterest = _repo.FindByInterest(lowercaseInterest);
             return Ok(allMembersByInterest);
         }

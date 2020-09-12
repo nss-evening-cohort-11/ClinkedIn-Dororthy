@@ -65,6 +65,13 @@ namespace ClinkedIn_Dorothy.Data
 
             member.Friends.Add(friend);
         }
+
+        public void Remove(int id, string delServe)
+        {
+            var oneMember = GetById(id);
+            oneMember.Services.Remove(delServe);
+        }
+
         public Member GetById(int id)
         {
             return _members.FirstOrDefault(member => member.Id == id);
