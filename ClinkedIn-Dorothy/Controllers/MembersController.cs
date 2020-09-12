@@ -28,15 +28,6 @@ namespace ClinkedIn_Dorothy.Controllers
             return Created($"/api/members/{member.Id}", member);
         }
 
-        // Get all members
-        [HttpGet]
-        public IActionResult GetAllMembers()
-        {
-            var allMembers = _repo.GetAll();
-
-            return Ok(allMembers);
-        }
-
 
         // Friends API calls
         [HttpPut("{memberId}/friends/{friendId}")]
