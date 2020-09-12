@@ -27,6 +27,21 @@ namespace ClinkedIn_Dorothy.Controllers
             return Created($"/api/members/{member.Id}", member);
         }
 
+        [HttpPut("{memberId}/friends/{friendId}")]
+        public IActionResult AddFriend(int memberId, int friendId)
+        {
+            _repo.AddAsFriend(memberId, friendId);
+
+            return Ok();
+        }
+        [HttpGet("{memberId}/friends")]
+
+        public IActionResult GetMyFriends(int memberId)
+        {
+            var getMyFriends = _repo.GetYourFriends(memberId);
+
+            return Ok(getMyFriends);
+        }
         [HttpGet]
         public IActionResult GetAllMembers()
         {
