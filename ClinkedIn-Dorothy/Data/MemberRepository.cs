@@ -41,7 +41,10 @@ namespace ClinkedIn_Dorothy.Data
             return _members;
         }
 
-
+        public List<Member> GetYourFriends(int memberId)
+        {
+            return GetById(memberId).Friends;
+        }
 
         public void AddMember(Member memberToAdd)
         {
@@ -54,6 +57,14 @@ namespace ClinkedIn_Dorothy.Data
 
             _members.Add(memberToAdd);
         }
+        public void AddAsFriend(int memberId, int friendId)
+        {
+            var member = GetById(memberId);
+
+            var friend = GetById(friendId);
+
+            member.Friends.Add(friend);
+        }
 
         public void RemoveService(int id, string delServe)
         {
@@ -65,7 +76,7 @@ namespace ClinkedIn_Dorothy.Data
         {
             return _members.FirstOrDefault(member => member.Id == id);
         }
-
+        
         public List<Member> LowercaseInterests()
         {
             var loweredMembers = new List<Member>();
