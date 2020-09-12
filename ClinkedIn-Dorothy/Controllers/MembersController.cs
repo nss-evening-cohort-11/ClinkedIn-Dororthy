@@ -34,5 +34,21 @@ namespace ClinkedIn_Dorothy.Controllers
 
             return Ok(allMembers);
         }
+
+        //[HttpGet("api/members/{memberId}/enemies")]
+        //public IActionResult GetAllEnemies()
+        //{
+        //    var allEnemies = _repo.GetEnemies(memberId);
+
+        //    return Ok(allEnemies);
+        //}
+
+        [HttpPut("{memberId}/enemies/{enemyId}")]
+            public IActionResult AddEnemy(int memberId, int enemyId)
+        {
+            _repo.AddAsEnemy(memberId, enemyId);
+
+            return Ok();
+        }
     }
 }

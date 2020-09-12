@@ -15,7 +15,7 @@ namespace ClinkedIn_Dorothy.Data
             return _members;
         }
 
-
+        
 
         public void AddMember(Member memberToAdd)
         {
@@ -27,6 +27,14 @@ namespace ClinkedIn_Dorothy.Data
             memberToAdd.Id = newId;
 
             _members.Add(memberToAdd);
+        }
+
+        public void AddAsEnemy(int memberId, int enemyId)
+        {
+            var member = GetById(memberId);
+            var newEnemy = GetById(enemyId);
+
+            member.Enemies.Add(newEnemy);
         }
 
         public Member GetById(int id)
