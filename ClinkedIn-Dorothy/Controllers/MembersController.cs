@@ -36,8 +36,8 @@ namespace ClinkedIn_Dorothy.Controllers
         }
 
 
-        [HttpGet("api/members/{memberId}/enemies")]
-        public IActionResult GetAllEnemies()
+        [HttpGet("{memberId}/enemies")]
+        public IActionResult GetAllEnemies(int memberId)
         {
             var allEnemies = _repo.GetEnemies(memberId);
 
@@ -48,6 +48,8 @@ namespace ClinkedIn_Dorothy.Controllers
         public IActionResult AddEnemy(int memberId, int enemyId)
         {
             _repo.AddAsEnemy(memberId, enemyId);
+
+            return Ok();
 
         }
 

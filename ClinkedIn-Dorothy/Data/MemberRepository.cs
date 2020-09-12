@@ -41,6 +41,10 @@ namespace ClinkedIn_Dorothy.Data
             return _members;
         }
 
+        public List<Member> GetEnemies(int memberId)
+        {
+            return GetById(memberId).Enemies;
+        }
         
 
         public void AddMember(Member memberToAdd)
