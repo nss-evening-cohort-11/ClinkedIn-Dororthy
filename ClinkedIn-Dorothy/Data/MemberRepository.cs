@@ -41,18 +41,17 @@ namespace ClinkedIn_Dorothy.Data
             return _members;
         }
 
-<<<<<<< HEAD
+
         public List<Member> GetEnemies(int memberId)
         {
             return GetById(memberId).Enemies;
         }
-        
-=======
+
         public List<Member> GetYourFriends(int memberId)
         {
             return GetById(memberId).Friends;
         }
->>>>>>> master
+
 
         public void AddMember(Member memberToAdd)
         {
