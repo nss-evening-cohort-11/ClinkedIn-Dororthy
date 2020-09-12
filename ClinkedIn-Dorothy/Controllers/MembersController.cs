@@ -20,6 +20,7 @@ namespace ClinkedIn_Dorothy.Controllers
             _repo = new MemberRepository();
         }
 
+        // Add a member
         [HttpPost]
         public IActionResult CreateMember(Member member)
         {
@@ -27,21 +28,7 @@ namespace ClinkedIn_Dorothy.Controllers
             return Created($"/api/members/{member.Id}", member);
         }
 
-        [HttpPut("{memberId}/friends/{friendId}")]
-        public IActionResult AddFriend(int memberId, int friendId)
-        {
-            _repo.AddAsFriend(memberId, friendId);
-
-            return Ok();
-        }
-        [HttpGet("{memberId}/friends")]
-
-        public IActionResult GetMyFriends(int memberId)
-        {
-            var getMyFriends = _repo.GetYourFriends(memberId);
-
-            return Ok(getMyFriends);
-        }
+        // Get all members
         [HttpGet]
         public IActionResult GetAllMembers()
         {
@@ -50,6 +37,53 @@ namespace ClinkedIn_Dorothy.Controllers
             return Ok(allMembers);
         }
 
+
+        // Friends API calls
+        [HttpPut("{memberId}/friends/{friendId}")]
+        public IActionResult AddFriend(int memberId, int friendId)
+        {
+            _repo.AddAsFriend(memberId, friendId);
+
+            return Ok();
+        }
+
+        [HttpGet("{memberId}/friends")]
+
+        public IActionResult GetMyFriends(int memberId)
+        {
+            var getMyFriends = _repo.GetYourFriends(memberId);
+
+            return Ok(getMyFriends);
+        }
+
+        [HttpGet("{memberId}/friends/their-friends")]
+        public IActionResult FindFriendsOfMyFriend(int memberId)
+        {
+            var potentialFriends = _repo.GetFriendsOfMyFriends(memberId);
+            return Ok(potentialFriends);
+        }
+
+
+        // Enemies API calls
+        [HttpGet("{memberId}/enemies")]
+        public IActionResult GetAllEnemies(int memberId)
+        {
+            var allEnemies = _repo.GetEnemies(memberId);
+
+            return Ok(allEnemies);
+        }
+
+        [HttpPut("{memberId}/enemies/{enemyId}")]
+        public IActionResult AddEnemy(int memberId, int enemyId)
+        {
+            _repo.AddAsEnemy(memberId, enemyId);
+
+            return Ok();
+
+        }
+
+
+        // Services API Calls
         [HttpGet("{id}/services")]
         public IActionResult GetServices(int id)
         {
@@ -90,6 +124,8 @@ namespace ClinkedIn_Dorothy.Controllers
             return Ok();
         }
 
+
+        // Services API Calls
         [HttpGet("{interest}")]
         public IActionResult GetMembersByInterest(string interest)
         {
