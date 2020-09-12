@@ -14,6 +14,8 @@ namespace ClinkedIn_Dorothy.Models
         public List<Member> Friends { get; set; } = new List<Member>();
         public List<Member> Enemies { get; set; } = new List<Member>();
         public DateTime DateOfRelease { get; set; }
+        public bool isWarden { get; set; } = false;
+
 
     }
 }

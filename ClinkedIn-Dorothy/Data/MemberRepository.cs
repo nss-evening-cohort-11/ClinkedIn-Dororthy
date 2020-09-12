@@ -17,6 +17,7 @@ namespace ClinkedIn_Dorothy.Data
                 Services = new List<string> { "Haircuts", "Smuggling", "Shoe shine" },
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
+                isWarden = false,
             },
             new Member {
                 Id = 2,
@@ -25,7 +26,8 @@ namespace ClinkedIn_Dorothy.Data
                 Services = new List<string> { "Haircuts", "Masonry", "Carpentry" },
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
-            },
+                isWarden = false,
+    },
             new Member {
                 Id = 3,
                 Name = "Brad",
@@ -33,18 +35,25 @@ namespace ClinkedIn_Dorothy.Data
                 Services = new List<string> { "Writing", "Sewing", "Carpentry" },
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
-            }
+                isWarden = true,
+    }
         };
 
+        // General methods
         public List<Member> GetAll()
         {
             return _members;
         }
 
-        public List<Member> GetYourFriends(int memberId)
+
+        public Member GetById(int id)
+
         {
-            return GetById(memberId).Friends;
+            return _members.FirstOrDefault(member => member.Id == id);
         }
+
+
+
 
         public void AddMember(Member memberToAdd)
         {
@@ -57,6 +66,14 @@ namespace ClinkedIn_Dorothy.Data
 
             _members.Add(memberToAdd);
         }
+
+
+        // Friend methods
+        public List<Member> GetYourFriends(int memberId)
+        {
+            return GetById(memberId).Friends;
+        }
+
         public void AddAsFriend(int memberId, int friendId)
         {
             var member = GetById(memberId);
@@ -66,17 +83,48 @@ namespace ClinkedIn_Dorothy.Data
             member.Friends.Add(friend);
         }
 
-        public void Remove(int id, string delServe)
+        public Dictionary<string, List<Member>> GetFriendsOfMyFriends(int memberId)
+        {
+            var myFriendsFriends = new Dictionary<string, List<Member>>();
+
+            // get my friends
+            var myFriends = this.GetYourFriends(memberId);
+
+            // loop
+            foreach (var friend in myFriends)
+            {
+                myFriendsFriends.Add(friend.Name, friend.Friends);
+            }
+
+            return myFriendsFriends;
+        }
+
+
+        // Enemey Methods
+        public void AddAsEnemy(int memberId, int enemyId)
+        {
+            var member = GetById(memberId);
+            var newEnemy = GetById(enemyId);
+
+            member.Enemies.Add(newEnemy);
+        }
+
+        public List<Member> GetEnemies(int memberId)
+        {
+            return GetById(memberId).Enemies;
+        }
+
+
+        // Services methods
+        public void RemoveService(int id, string delServe)
         {
             var oneMember = GetById(id);
             oneMember.Services.Remove(delServe);
+
         }
 
-        public Member GetById(int id)
-        {
-            return _members.FirstOrDefault(member => member.Id == id);
-        }
-        
+
+        // Interests Methods
         public List<Member> LowercaseInterests()
         {
             var loweredMembers = new List<Member>();

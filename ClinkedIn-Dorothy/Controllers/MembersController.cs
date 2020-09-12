@@ -20,6 +20,7 @@ namespace ClinkedIn_Dorothy.Controllers
             _repo = new MemberRepository();
         }
 
+        // Add a member
         [HttpPost]
         public IActionResult CreateMember(Member member)
         {
@@ -27,6 +28,8 @@ namespace ClinkedIn_Dorothy.Controllers
             return Created($"/api/members/{member.Id}", member);
         }
 
+
+        // Friends API calls
         [HttpPut("{memberId}/friends/{friendId}")]
         public IActionResult AddFriend(int memberId, int friendId)
         {
@@ -34,6 +37,7 @@ namespace ClinkedIn_Dorothy.Controllers
 
             return Ok();
         }
+
         [HttpGet("{memberId}/friends")]
 
         public IActionResult GetMyFriends(int memberId)
@@ -42,14 +46,35 @@ namespace ClinkedIn_Dorothy.Controllers
 
             return Ok(getMyFriends);
         }
-        [HttpGet]
-        public IActionResult GetAllMembers()
-        {
-            var allMembers = _repo.GetAll();
 
-            return Ok(allMembers);
+        [HttpGet("{memberId}/friends/their-friends")]
+        public IActionResult FindFriendsOfMyFriend(int memberId)
+        {
+            var potentialFriends = _repo.GetFriendsOfMyFriends(memberId);
+            return Ok(potentialFriends);
         }
 
+
+        // Enemies API calls
+        [HttpGet("{memberId}/enemies")]
+        public IActionResult GetAllEnemies(int memberId)
+        {
+            var allEnemies = _repo.GetEnemies(memberId);
+
+            return Ok(allEnemies);
+        }
+
+        [HttpPut("{memberId}/enemies/{enemyId}")]
+        public IActionResult AddEnemy(int memberId, int enemyId)
+        {
+            _repo.AddAsEnemy(memberId, enemyId);
+
+            return Ok();
+
+        }
+
+
+        // Services API Calls
         [HttpGet("{id}/services")]
         public IActionResult GetServices(int id)
         {
@@ -82,24 +107,16 @@ namespace ClinkedIn_Dorothy.Controllers
                 {
                     if (service == oneMember.Services[i])
                     {
-                        _repo.Remove(id, service);
+                        _repo.RemoveService(id, service);
                     }
                 }
             }
 
-            //foreach (var service in oneMember.Services)
-            //{
-            //    foreach (var delServe in serviceToDelete.Services)
-            //    {
-            //        if (service == delServe)
-            //        {
-            //            _repo.Remove(id, delServe);
-            //        }
-            //    }
-            //}
             return Ok();
         }
 
+
+        // Services API Calls
         [HttpGet("{interest}")]
         public IActionResult GetMembersByInterest(string interest)
         {
