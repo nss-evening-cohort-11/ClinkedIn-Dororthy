@@ -55,12 +55,20 @@ namespace ClinkedIn_Dorothy.Data
             _members.Add(memberToAdd);
         }
 
+
         public void AddAsEnemy(int memberId, int enemyId)
         {
             var member = GetById(memberId);
             var newEnemy = GetById(enemyId);
 
             member.Enemies.Add(newEnemy);
+        }
+
+        public void Remove(int id, string delServe)
+        {
+            var oneMember = GetById(id);
+            oneMember.Services.Remove(delServe);
+
         }
 
         public Member GetById(int id)
