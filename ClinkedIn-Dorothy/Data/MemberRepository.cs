@@ -17,6 +17,7 @@ namespace ClinkedIn_Dorothy.Data
                 Services = new List<string> { "Haircuts", "Smuggling", "Shoe shine" },
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
+                isWarden = false,
             },
             new Member {
                 Id = 2,
@@ -25,7 +26,8 @@ namespace ClinkedIn_Dorothy.Data
                 Services = new List<string> { "Haircuts", "Masonry", "Carpentry" },
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
-            },
+                isWarden = false,
+    },
             new Member {
                 Id = 3,
                 Name = "Brad",
@@ -33,7 +35,8 @@ namespace ClinkedIn_Dorothy.Data
                 Services = new List<string> { "Writing", "Sewing", "Carpentry" },
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
-            }
+                isWarden = true,
+    }
         };
 
         // General methods
@@ -42,10 +45,15 @@ namespace ClinkedIn_Dorothy.Data
             return _members;
         }
 
+
         public Member GetById(int id)
+
         {
             return _members.FirstOrDefault(member => member.Id == id);
         }
+
+
+
 
         public void AddMember(Member memberToAdd)
         {
