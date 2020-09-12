@@ -67,21 +67,11 @@ namespace ClinkedIn_Dorothy.Controllers
                 {
                     if (service == oneMember.Services[i])
                     {
-                        _repo.Remove(id, service);
+                        _repo.RemoveService(id, service);
                     }
                 }
             }
 
-            //foreach (var service in oneMember.Services)
-            //{
-            //    foreach (var delServe in serviceToDelete.Services)
-            //    {
-            //        if (service == delServe)
-            //        {
-            //            _repo.Remove(id, delServe);
-            //        }
-            //    }
-            //}
             return Ok();
         }
 
