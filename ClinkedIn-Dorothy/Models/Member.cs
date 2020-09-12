@@ -9,10 +9,10 @@ namespace ClinkedIn_Dorothy.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<string> Interest { get; set; }
-        public List<string> Services { get; set; }
-        public List<Member> Friends { get; set; }
-        public List<Member> Enemies { get; set; }
+        public List<string> Interest { get; set; } = new List<string>();
+        public List<string> Services { get; set; } = new List<string>();
+        public List<Member> Friends { get; set; } = new List<Member>();
+        public List<Member> Enemies { get; set; } = new List<Member>();
 
     }
 }
