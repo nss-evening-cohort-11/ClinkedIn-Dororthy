@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {}
+    "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {
+    "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
+        "projectUniqueName": "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
         "projectName": "ClinkedIn-Dorothy",
-        "projectPath": "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
-        "packagesPath": "C:\\Users\\crumpton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crumpton\\Documents\\Workspace\\backend-group-projects\\ClickedIn\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\obj\\",
+        "projectPath": "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\ClinkedIn-Dorothy.csproj",
+        "packagesPath": "C:\\Users\\John Fleming\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\John Fleming\\source\\repos\\nss-e11\\projects\\group\\ClinkedIn-Dororthy\\ClinkedIn-Dorothy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\crumpton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\John Fleming\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

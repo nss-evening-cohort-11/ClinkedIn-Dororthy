@@ -18,3 +18,23 @@ C:\Users\crumpton\Documents\Workspace\backend-group-projects\ClickedIn\ClinkedIn
 C:\Users\crumpton\Documents\Workspace\backend-group-projects\ClickedIn\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.dll
 C:\Users\crumpton\Documents\Workspace\backend-group-projects\ClickedIn\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.pdb
 C:\Users\crumpton\Documents\Workspace\backend-group-projects\ClickedIn\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.genruntimeconfig.cache
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\ClinkedIn-Dorothy.exe
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\ClinkedIn-Dorothy.deps.json
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\ClinkedIn-Dorothy.runtimeconfig.json
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\ClinkedIn-Dorothy.runtimeconfig.dev.json
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\ClinkedIn-Dorothy.dll
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\bin\Debug\netcoreapp3.1\ClinkedIn-Dorothy.pdb
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.csprojAssemblyReference.cache
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.AssemblyInfoInputs.cache
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.AssemblyInfo.cs
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.csproj.CoreCompileInputs.cache
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.RazorTargetAssemblyInfo.cache
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\staticwebassets\ClinkedIn-Dorothy.StaticWebAssets.Manifest.cache
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\staticwebassets\ClinkedIn-Dorothy.StaticWebAssets.xml
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.dll
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.pdb
+C:\Users\John Fleming\source\repos\nss-e11\projects\group\ClinkedIn-Dororthy\ClinkedIn-Dorothy\obj\Debug\netcoreapp3.1\ClinkedIn-Dorothy.genruntimeconfig.cache
