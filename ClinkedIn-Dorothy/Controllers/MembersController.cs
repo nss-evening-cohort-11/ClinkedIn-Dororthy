@@ -34,5 +34,13 @@ namespace ClinkedIn_Dorothy.Controllers
 
             return Ok(allMembers);
         }
+
+        [HttpGet("{interest}")]
+        public IActionResult GetMembersByInterest(string interest)
+        {
+            var lowercaseInterest = interest;
+            var allMembersByInterest = _repo.FindByInterest(lowercaseInterest);
+            return Ok(allMembersByInterest);
+        }
     }
 }
