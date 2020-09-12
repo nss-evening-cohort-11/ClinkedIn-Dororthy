@@ -59,7 +59,7 @@ namespace ClinkedIn_Dorothy.Controllers
         [HttpGet("{interest}")]
         public IActionResult GetMembersByInterest(string interest)
         {
-            var lowercaseInterest = interest;
+            var lowercaseInterest = interest.ToLower();
             var allMembersByInterest = _repo.FindByInterest(lowercaseInterest);
             return Ok(allMembersByInterest);
 >>>>>>> 2066e746d36068a0cea0eb9cffbd4ddb2ec9a381
