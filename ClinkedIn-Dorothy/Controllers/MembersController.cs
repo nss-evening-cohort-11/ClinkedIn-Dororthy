@@ -107,5 +107,11 @@ namespace ClinkedIn_Dorothy.Controllers
             var allMembersByInterest = _repo.FindByInterest(lowercaseInterest);
             return Ok(allMembersByInterest);
         }
+        [HttpGet("{id}")]
+        public IActionResult GetDaysLeft(int memberId)
+        {
+            var daysToFreedom = _repo.DaysLeft(memberId);
+            return Ok(daysToFreedom);
+        }
     }
 }

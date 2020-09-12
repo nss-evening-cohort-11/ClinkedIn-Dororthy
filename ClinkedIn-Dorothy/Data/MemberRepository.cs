@@ -104,5 +104,13 @@ namespace ClinkedIn_Dorothy.Data
 
             return filteredMembers;
         }
+
+        public int DaysLeft(int memberId)
+        {
+            var member = GetById(memberId);
+            DateTime ReleaseDate = member.DateOfRelease;
+            DateTime today = DateTime.Now;
+            return (today - ReleaseDate).Days;
+        }
     }
 }

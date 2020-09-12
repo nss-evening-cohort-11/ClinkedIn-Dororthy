@@ -13,6 +13,7 @@ namespace ClinkedIn_Dorothy.Models
         public List<string> Services { get; set; } = new List<string>();
         public List<Member> Friends { get; set; } = new List<Member>();
         public List<Member> Enemies { get; set; } = new List<Member>();
+        public DateTime DateOfRelease { get; set; }
 
     }
 }
