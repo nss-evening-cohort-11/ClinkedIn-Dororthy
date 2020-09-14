@@ -18,6 +18,7 @@ namespace ClinkedIn_Dorothy.Data
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
                 isWarden = false,
+                DateOfRelease = new DateTime(2021, 09, 12)
             },
             new Member {
                 Id = 2,
@@ -27,6 +28,7 @@ namespace ClinkedIn_Dorothy.Data
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
                 isWarden = false,
+                DateOfRelease = new DateTime(2022, 09, 12)
     },
             new Member {
                 Id = 3,
@@ -36,6 +38,7 @@ namespace ClinkedIn_Dorothy.Data
                 Friends = new List<Member> { },
                 Enemies = new List<Member> { },
                 isWarden = true,
+                DateOfRelease = null
     }
         };
 
@@ -153,12 +156,16 @@ namespace ClinkedIn_Dorothy.Data
             return filteredMembers;
         }
 
-        public int DaysLeft(int memberId)
+        public int? DaysLeft(int memberId)
         {
             var member = GetById(memberId);
-            DateTime ReleaseDate = member.DateOfRelease;
+            if(member.isWarden)
+            {
+                return null;
+            }
+            DateTime ReleaseDate = member.DateOfRelease.Value;
             DateTime today = DateTime.Now;
-            return (today - ReleaseDate).Days;
+            return (ReleaseDate - today).Days;
         }
     }
 }
