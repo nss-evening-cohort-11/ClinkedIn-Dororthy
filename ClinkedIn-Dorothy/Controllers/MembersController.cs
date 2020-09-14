@@ -116,13 +116,26 @@ namespace ClinkedIn_Dorothy.Controllers
         }
 
 
-        // Services API Calls
+        // Interest API Calls
         [HttpGet("{interest}")]
         public IActionResult GetMembersByInterest(string interest)
         {
             var lowercaseInterest = interest.ToLower();
             var allMembersByInterest = _repo.FindByInterest(lowercaseInterest);
             return Ok(allMembersByInterest);
+        }
+        [HttpGet("{memberId}/TimeLeft")]
+        public IActionResult GetDaysLeft(int memberId)
+        {
+            var daysToFreedom = _repo.DaysLeft(memberId);
+            if (daysToFreedom == null)
+            {
+                return StatusCode(406, "Member is Warden");
+            }
+            else
+            {
+                return Ok(daysToFreedom);
+            }
         }
     }
 }
